@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap');
+:root{
+    --white:#FFFFFF;
+    --green:#CEFBE0;
+    --dgreen:#B2E8C7;
+    --greentree:#3B8019;
+    --black:#000000;
+    --red:#FD0404;
+    --Rtables:#914D4D;
+    --size24:1rem;
+    --size16:0.7rem;
+    --font-halant:"Halant",serif;
+}
+body{
+    color: #000000;
+    font-family: Halant;
+}
+*{
+    padding: 0;
+    margin: 0;
+}

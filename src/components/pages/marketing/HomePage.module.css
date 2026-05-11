@@ -1,0 +1,41 @@
+.HomePageLeft{
+    padding-left:2rem ;
+    padding-top: 2rem;
+    
+}
+.HomePageRight{
+    margin-top: 6rem;
+}
+.HomePage{
+    display: flex;
+    gap: 10rem;
+    background-color: var(--green);
+}
+.landingImage{
+    height:80vh;
+    position: absolute;
+}
+.authButtons{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 34rem;
+    margin-left:2rem ;
+}
+.authButton{
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: var(--green);
+    border-radius: 0.5rem;
+    position:relative;
+    top: 0;
+}
+.allInOne{
+    border: 2px solid var(--greentree);
+    border-radius: 2rem;
+    width: fit-content;
+    padding: 0.1rem 0.9rem;
+    background-color: #DAFCEA;
+    margin-bottom: 2rem;
+}
