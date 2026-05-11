@@ -1,16 +1,52 @@
-# React + Vite
+🍽️ Smart Menu
+A modern, full-stack restaurant management platform that digitizes the dining experience — from interactive digital menus for customers to a powerful operations dashboard for restaurant owners.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
+Smart Menu bridges the gap between restaurants and their customers through a sleek digital interface. Restaurant operators can manage their menu, track orders, and monitor performance in real time, while diners enjoy a seamless, modern browsing and ordering experience.
 
-Currently, two official plugins are available:
+Features
+For Restaurant Operators
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Dashboard & Analytics — Visual overview of orders, revenue, and performance metrics
+Menu Management — Add, edit, and organize menu items with images and descriptions
+Order Management — Track and manage incoming orders in real time
+Onboarding Flow — Guided setup to get your restaurant up and running quickly
 
-## React Compiler
+For Customers
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Digital Menu — Browse menu items with rich visuals in a clean, intuitive interface
+Category Navigation — Easily filter and explore dishes by category
+Responsive Design — Optimized for both desktop and mobile devices
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tech Stack
+
+Frontend — React, React Router, CSS Modules
+Styling — Custom design system with CSS variables
+Routing — React Router DOM
+Build Tool — Vite
+
+
+Getting Started
+Prerequisites
+
+Node.js v18+
+npm or yarn
+
+Installation
+bash# Clone the repository
+git clone https://github.com/ijenny77/SMART-MENU.git
+
+# Navigate into the project
+cd smart-menu
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+The app will be running at http://localhost:5173
+
+
+Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
