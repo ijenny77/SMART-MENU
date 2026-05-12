@@ -2,10 +2,12 @@
     display: flex;
     gap:18rem;
     background-color: var(--green);
-    padding:1rem
+    padding:1rem;
+    padding-left: 6rem;
+    height: 7vh;
 }
 .logo{
-    width: 20%;
+    height:7vh;
 }
 .logoName{
     display: flex;

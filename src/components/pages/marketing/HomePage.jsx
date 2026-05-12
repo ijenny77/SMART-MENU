@@ -5,6 +5,8 @@ import styles from './HomePage.module.css'
 import Button from '../../ui/Button'
 import User from '../../../assets/Group 389.png'
 import Bag from '../../../assets/Group 47.png'
+import Users from '../../../assets/Group 23.png'
+import StatsSection from './StatsSection'
 const HomePage = () => {
   return (
     <div className={styles.mainHomePage}>
@@ -19,10 +21,15 @@ const HomePage = () => {
           </div>
           <div className={styles.HomePageRight}>
             <p className={styles.allInOne}>All-in-one Restaurant Menu Management </p>
-            <h3 className={styles.}>SMART MENU FOR MODERN RESTAURANTS.</h3>
-            <p>create digital menus,update items instantly, and receive orders in real time.</p>
-            <p>No paper menus. No confusion. Just smart management</p>
+            <h3 className={styles.LandingText}>SMART MENU FOR MODERN <span className={styles.restaurants}> RESTAURANTS.</span></h3>
+            <p className={styles.landingTextSmall}>create digital menus,update items instantly, and receive orders in real time.</p>
+            <p className={styles.landingTextSmall}>No paper menus. No confusion. Just smart management</p>
+            <div className={styles.Users}>
+              <img src={Users} alt="" />
+              <p className={styles.usersText}>Join 500+ restaurants <br /> growing with <span className={styles.smartMenu}>SMART MENU</span></p>
+            </div>
           </div>
+          <StatsSection/>
         </div>
     </div>
   )
