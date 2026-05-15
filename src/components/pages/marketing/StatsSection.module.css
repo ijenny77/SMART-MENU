@@ -1,0 +1,21 @@
+.statItem{
+    display: flex;
+    gap:1rem
+}
+.statIcon{
+    width: 5.2rem;
+}
+.allStats{
+    display: flex;
+    gap: 2rem;
+    background-color: var(--white);
+    width: fit-content;
+    margin: 3.4rem 20rem;
+    padding: 1.9rem 3rem;
+    border-radius: 0.5rem;
+}
+.divider{ 
+    width: 0.1rem;
+    height: 60px;
+    background-color: #c6c6c6;
+    flex-shrink: 0}
