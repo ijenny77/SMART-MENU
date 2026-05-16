@@ -14,20 +14,20 @@ const stats = [
     {
       id:12,
       icon:bag,
-      value:'100+',
-      label:['Restaurants','Trust us']
+      value:'1,000+',
+      label:['Daily Orders','Managed']
     },
     {
       id:3,
       icon:bar,
-      value:'100+',
-      label:['Restaurants','Trust us']
+      value:'99.9%',
+      label:['System ','Uptime']
     },
     {
       id:4,
       icon:location,
-      value:'100+',
-      label:['Restaurants','Trust us']
+      value:'Kigali',
+      label:['Proudly Serving','Local Businesses']
     },
 
 ]
@@ -41,8 +41,8 @@ const StatsSection = () => {
             <div className={styles.statItem}>
               <img className={styles.statIcon} src={stat.icon}/>
               <div className={styles.statText}>
-                <p>{stat.value}</p>
-                <p>{stat.label[0]} <br/> {stat.label[1]}</p>
+                <p className={styles.value}>{stat.value}</p>
+                <p className={styles.label}>{stat.label[0]} <br/> {stat.label[1]}</p>
               </div>
             </div>
             {index < stats.length - 1 && (

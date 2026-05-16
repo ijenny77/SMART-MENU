@@ -7,6 +7,7 @@ import User from '../../../assets/Group 389.png'
 import Bag from '../../../assets/Group 47.png'
 import Users from '../../../assets/Group 23.png'
 import StatsSection from './StatsSection'
+import Working from './Working'
 const HomePage = () => {
   return (
     <div className={styles.mainHomePage}>
@@ -29,7 +30,10 @@ const HomePage = () => {
               <p className={styles.usersText}>Join 500+ restaurants <br /> growing with <span className={styles.smartMenu}>SMART MENU</span></p>
             </div>
           </div>
-          <StatsSection/>
+          <div className={styles.homeLast}>
+            <StatsSection/>
+            <Working/>
+          </div>
         </div>
     </div>
   )

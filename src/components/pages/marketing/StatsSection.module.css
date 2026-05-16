@@ -9,13 +9,26 @@
     display: flex;
     gap: 2rem;
     background-color: var(--white);
-    width: fit-content;
-    margin: 3.4rem 20rem;
+    width: 60vw;
+    margin: 3.6rem 20rem;
     padding: 1.9rem 3rem;
-    border-radius: 0.5rem;
+    border-radius: 0.7rem;
+    box-shadow: 0px 4px 5px grey;
 }
 .divider{ 
     width: 0.1rem;
-    height: 60px;
+    height: 70px;
     background-color: #c6c6c6;
-    flex-shrink: 0}
+    flex-shrink: 0
+}
+.value{
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+.label{
+    color: grey;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.3rem;
+
+}

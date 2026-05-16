@@ -9,7 +9,7 @@
 .HomePage{
     display: grid;
     grid-template-columns:42% 58%;
-    height: 93vh;
+    height: 95vh;
     background-color: var(--green);
 }
 .landingImage{
@@ -65,4 +65,11 @@
 }
 .smartMenu{
     color: var(--greentree);
+}
+.mainHomePage{
+    background-color: black;
+    min-height:100vh ;
+}
+.homeLast{
+    grid-column: 1/-1;
 }
