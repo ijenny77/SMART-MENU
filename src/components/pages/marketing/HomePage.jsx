@@ -8,6 +8,7 @@ import Bag from '../../../assets/Group 47.png'
 import Users from '../../../assets/Group 23.png'
 import StatsSection from './StatsSection'
 import Working from './Working'
+import LoginPage from './LoginPage'
 const HomePage = () => {
   return (
     <div className={styles.mainHomePage}>
@@ -33,6 +34,7 @@ const HomePage = () => {
           <div className={styles.homeLast}>
             <StatsSection/>
             <Working/>
+            <LoginPage/>
           </div>
         </div>
     </div>

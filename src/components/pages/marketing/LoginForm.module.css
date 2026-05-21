@@ -1,0 +1,57 @@
+.loginform{
+    background-color: var(--green);
+    border-radius: 1rem;
+    width:18%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+.welcome{
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+.loginSM{
+    font-weight: 900;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+input{
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 1rem;
+}
+.forgotpass{
+    font-size: 0.7rem;
+    margin-left: 11.5rem;
+    color: rgb(100, 100, 100);
+}
+/*Changing the backgroundColor to green*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px var(--green) inset !important;
+    -webkit-text-fill-color: #000000;
+}
+
+.login{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 2rem;
+}
+.noAcc{
+    margin:1.8rem 0rem;
+    text-align: center;
+}
+.signup{
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 900;
+}
