@@ -42,7 +42,7 @@ input:-webkit-autofill {
 .login{
     background-color: var(--black);
     color: var(--white);
-    padding: 0.5rem;
+    padding: 0.7rem;
     border: none;
     border-radius: 2rem;
 }
