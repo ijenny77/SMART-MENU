@@ -5,6 +5,7 @@ import clipboard from '../../../assets/Group 52.png'
 import busdelivery from '../../../assets/Group 50.png'
 import lamp from '../../../assets/Group 53.png'
 import apple from '../../../assets/Group 46.png'
+import leaf from '../../../assets/leaf 1.png'
 
 const items = [
   {
@@ -40,6 +41,10 @@ const LoginPage = () => {
                   </div>
                 </div>
                 ))}
+                <div className={styles.leafbox}>
+                  <img src={leaf} alt="" />
+                  <p>More time for your customers, <br/> less time on paperwork. <br/><span style={{color:'#B2E8C7'}}> That’s the Smart Menu way.</span></p>
+                </div>
             </div>
             <img className={styles.apple} src={apple} alt="" />
           </div>

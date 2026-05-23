@@ -1,20 +1,24 @@
 .loginform{
     background-color: var(--green);
-    border-radius: 1rem;
-    width:18%;
+    border-radius: 2.5rem;
+    width:22%;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 3rem;
-    padding-bottom: 1.4rem;
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
+}
+label{
+    margin-top: 0.8rem;
 }
 .welcome{
     font-weight: 800;
     text-align: center;
     margin-bottom: 0.8rem;
     font-size: 1.3rem;
+    margin-top: 1rem;
 }
 .loginSM{
     font-weight: 900;
@@ -30,7 +34,7 @@ input{
 }
 .forgotpass{
     font-size: 0.7rem;
-    margin-left: 11.5rem;
+    margin-left: 15.7rem;
     color: rgb(100, 100, 100);
 }
 /*Changing the backgroundColor to green*/
@@ -45,9 +49,11 @@ input:-webkit-autofill {
     padding: 0.7rem;
     border: none;
     border-radius: 2rem;
+    margin: 1.3rem 0rem;
 }
 .noAcc{
-    margin:1.8rem 0rem;
+    margin-top:1.8rem;
+    margin-bottom: 0rem;
     text-align: center;
 }
 .signup{
