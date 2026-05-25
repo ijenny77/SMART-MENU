@@ -1,11 +1,11 @@
 .loginform{
+    height: 60vh;
     background-color: var(--green);
     border-radius: 2.5rem;
     width:22%;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 3rem;
-    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
@@ -46,14 +46,13 @@ input:-webkit-autofill {
 .login{
     background-color: var(--black);
     color: var(--white);
-    padding: 0.7rem;
+    padding: 0.9rem;
     border: none;
     border-radius: 2rem;
-    margin: 1.3rem 0rem;
+    margin: 1.3rem 0 0 0;
 }
 .noAcc{
-    margin-top:1.8rem;
-    margin-bottom: 0rem;
+    margin-top:1.9rem;
     text-align: center;
 }
 .signup{

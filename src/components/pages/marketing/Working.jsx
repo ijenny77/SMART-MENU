@@ -28,7 +28,7 @@ const working = () => {
   return (
     <div className={styles.cards}>
       {cards.map((card,index)=>(
-        <div className={styles.card}>
+        <div key={index} className={styles.card}>
           <p className={styles.step}>{card.step}</p>
           <img className={styles.icon} src={card.icon} alt="" />
           <p className={styles.title}>{card.title}</p>

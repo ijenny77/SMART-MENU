@@ -6,7 +6,7 @@ import Button from '../../ui/Button'
 // import email from '../../../assets/email 2.png'
 // import lock from '../../../assets/lock 1.png'
 
-const loginForm = () => {
+const LoginForm = () => {
   return (
     <div className={styles.loginform}>
         <p className={styles.welcome}>Welcome</p>
@@ -22,4 +22,4 @@ const loginForm = () => {
   )
 }
 
-export default loginForm 
+export default LoginForm 

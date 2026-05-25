@@ -2,7 +2,7 @@
     color: var(--white);
     display: flex;
     flex-direction: column;
-    margin-left: 5rem;
+    margin-left: 8rem;
     margin-top: 4rem;
 }
 .quote{
@@ -30,16 +30,16 @@
 .paragraph{
     font-size: 1rem;
     color: #BFBFBF;
+    width: 18rem;
 }
 .heading{
     font-size: 1.1rem;
 }
 .leftside{
     display: flex;
-    gap: 0.1rem;
 }
 .apple{
-    width: 25rem;
+    width: 32rem;
 }
 .mainLoginPage{
     display: flex;
