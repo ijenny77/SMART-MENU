@@ -26,4 +26,11 @@
 }
 .icon{
     width: 8vw;
-} 
+}
+.workingWay{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    margin:0 0 3rem 0;
+}

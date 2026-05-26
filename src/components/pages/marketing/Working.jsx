@@ -26,15 +26,18 @@ const cards =[
 
 const working = () => {
   return (
-    <div className={styles.cards}>
-      {cards.map((card,index)=>(
-        <div key={index} className={styles.card}>
-          <p className={styles.step}>{card.step}</p>
-          <img className={styles.icon} src={card.icon} alt="" />
-          <p className={styles.title}>{card.title}</p>
-        </div>
-      ))}
-    </div>
+    <>
+      <p className={styles.workingWay}>HOW IT WORKS</p>
+      <div className={styles.cards}>
+        {cards.map((card,index)=>(
+          <div key={index} className={styles.card}>
+            <p className={styles.step}>{card.step}</p>
+            <img className={styles.icon} src={card.icon} alt="" />
+            <p className={styles.title}>{card.title}</p>
+          </div>
+        ))}
+      </div>
+    </>
   )
 }
 

@@ -1,0 +1,24 @@
+.mainFooter{
+    margin-left: 3rem;
+    color: var(--white);
+}
+.logo{
+    width: 4rem;
+}
+.smartMenu{
+    color: var(--greentree);
+    font-size: 1.4rem;
+}
+.hrLine {
+  width: 80rem;
+  height: 1px;
+  border: none;
+  margin: 1.4rem 4.2rem;
+  background-color: rgb(101, 101, 101);
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-left: 4rem;
+}
