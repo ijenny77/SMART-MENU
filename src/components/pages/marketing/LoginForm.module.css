@@ -1,8 +1,8 @@
 .loginform{
-    height: 60vh;
+    max-height: 60vh;
     background-color: var(--green);
     border-radius: 2.5rem;
-    width:22%;
+    max-width:22%;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 3rem;

@@ -9,8 +9,9 @@
 .HomePage{
     display: grid;
     grid-template-columns:42% 58%;
-    height: 95vh;
+    max-height: 95vh;
     background-color: var(--green);
+    align-items: center;
 }
 .landingImage{
     max-height:80vh;

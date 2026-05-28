@@ -38,8 +38,8 @@ const HomePage = () => {
             <Working/>
             <LoginPage/>
           </div>
-          <Footer/>
         </div>
+        <Footer/>
     </div>
   )
 }

@@ -6,12 +6,16 @@ const Footer = () => {
     <div className={styles.mainFooter}>
       <hr className={styles.hrLine}/>
       <div className={styles.footer}>
-        <img className={styles.logo} src={logo} alt="" />
-        <p className={styles.smartMenu}>SMART MENU</p>
-        <p>&2026;2024 Smart Menu.All rights reserved.</p>
-        <p>Privacy Policy</p>
-        <p>Terms of Service</p>
-        <p>Support</p>
+        <div className={styles.leftSection}>
+          <img className={styles.logo} src={logo} alt="" />
+          <p className={styles.smartMenu}>SMART MENU</p>
+        </div>
+        <p className={styles.copyright}>{'\u00A9'} 2026 Smart Menu. All rights reserved.</p>
+        <div className={styles.footerLinks}>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/support">Support</a>
+        </div>
       </div>
     </div>
   )

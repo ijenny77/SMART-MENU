@@ -9,6 +9,7 @@
     display: flex;
     gap: 2rem;
     background-color: var(--white);
+    width: 62%;
     max-width: 60vw;
     margin: 3.6rem auto;
     padding: 1.9rem 3rem;
