@@ -1,8 +1,11 @@
 import React from 'react'
-
+import styles from './SignUpPage.module.css'
+import SignUpForm from './SignUPForm'
 const SignUpPage = () => {
   return (
-    <div>SignUpPage</div>
+    <div className={styles.mainSignUpPage}>
+      <SignUpForm/>
+    </div>
   )
 }
 

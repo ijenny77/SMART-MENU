@@ -9,15 +9,15 @@ import Button from '../../ui/Button'
 const LoginForm = () => {
   return (
     <div className={styles.loginform}>
-        <p className={styles.welcome}>Welcome</p>
-        <p className={styles.loginSM}>Login to SMART MENU</p>
-        <label style={{marginBottom:'0.7rem'}}>Email</label>
-        <Input type="email" className={styles.email} />
-        <label>Password</label>
-        <p className={styles.forgotpass}>Forgot password?</p>
-        <Input type="password" className={styles.password}/>
-        <Button className={styles.login}>Log in </Button>
-        <span className={styles.noAcc}>Don't have an account?<Link className={styles.signup}>Sign up?</Link></span>
+      <p className={styles.welcome}>Welcome</p>
+      <p className={styles.loginSM}>Login to SMART MENU</p>
+      <label style={{marginBottom:'0.7rem'}}>Email</label>
+      <Input type="email" className={styles.email} />
+      <label>Password</label>
+      <p className={styles.forgotpass}>Forgot password?</p>
+      <Input type="password" className={styles.password}/>
+      <Button className={styles.login}>Log in </Button>
+      <span className={styles.noAcc}>Don't have an account?<Link className={styles.signup}>Sign up?</Link></span>
     </div>
   )
 }

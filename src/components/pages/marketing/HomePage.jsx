@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import TopBar from '../../TopBar'
 import homeImage from '../../../assets/HomeImage.png'
 import styles from './HomePage.module.css'
@@ -10,7 +10,14 @@ import StatsSection from './StatsSection'
 import Working from './Working'
 import LoginPage from './LoginPage'
 import Footer from '../../Footer'
+import { useNavigate } from 'react-router-dom'
 const HomePage = () => {
+  const navigate = useNavigate();
+  const sectionLogin = useRef(null);
+  const handleSectionLogin = ()=>{
+    sectionLogin.current.scrollIntoView({behavior:'smooth'})
+  }
+
   return (
     <div className={styles.mainHomePage}>
         <TopBar/>
@@ -18,8 +25,8 @@ const HomePage = () => {
           <div className={styles.HomePageLeft}>
             
             <div className={styles.authButtons}>
-              <Button className={styles.authButton}><img src={User} alt="user" />Register your restaurant</Button>
-              <Button className={styles.authButton}><img src={Bag} alt="Bag" /> Restaurant already registered?</Button>
+              <Button className={styles.authButton} onClick={()=> navigate('/SignUpPage')}><img src={User} alt="user" />Register your restaurant</Button>
+              <Button className={styles.authButton} onClick={handleSectionLogin}><img src={Bag} alt="Bag" /> Restaurant already registered?</Button>
             </div>
             <img className={styles.landingImage} src={homeImage} alt="landing Image" />
           </div>
@@ -36,7 +43,9 @@ const HomePage = () => {
           <div className={styles.homeLast}>
             <StatsSection/>
             <Working/>
-            <LoginPage/>
+            <section ref={sectionLogin}>
+              <LoginPage/>
+            </section>
           </div>
         </div>
         <Footer/>
