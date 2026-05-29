@@ -3,18 +3,18 @@
     background-color: var(--green);
     border-radius: 2.5rem;
     max-width:22%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 3rem;
+    padding: 3rem 3rem 2rem 3rem;
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
 }
 label{
     margin-top: 0.8rem;
+    font-family: var(--body);
 }
 .welcome{
     font-weight: 800;
+    font-family: var(--headings);
     text-align: center;
     margin-bottom: 0.8rem;
     font-size: 1.3rem;
@@ -26,16 +26,19 @@ label{
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 1rem;
+    font-family: var(--headings);
 }
 input{
     border-radius: 0.3rem;
     padding: 0.5rem 0.8rem;
     margin-bottom: 1rem;
+    font-family: var(--body);
 }
 .forgotpass{
     font-size: 0.7rem;
-    margin-left: 15.7rem;
+    margin-left: 14.8rem;
     color: rgb(100, 100, 100);
+    font-family: var(--body);
 }
 /*Changing the backgroundColor to green*/
 input:-webkit-autofill {
@@ -50,10 +53,12 @@ input:-webkit-autofill {
     border: none;
     border-radius: 2rem;
     margin: 1.3rem 0 0 0;
+    font-family: var(--buttons);
 }
 .noAcc{
     margin-top:1.9rem;
     text-align: center;
+    font-family: var(--body);
 }
 .signup{
     color: var(--black);

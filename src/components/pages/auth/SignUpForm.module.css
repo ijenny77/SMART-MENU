@@ -14,7 +14,7 @@
     text-align: center;
     font-weight: 900;
     font-family: var(--headings);
-    font-size: var(--size24);
+    font-size: 1.2rem;
 }
 .divider{
     display: flex;
@@ -68,6 +68,7 @@ input[type='password'],[type='email'],[type='text']{
 .haveAcc{
     text-align: center;
     font-family: var(--body);
+    font-size: 0.9rem;
 }
 .signIn{
     text-decoration: none;
