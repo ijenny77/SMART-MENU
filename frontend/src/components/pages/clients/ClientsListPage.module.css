@@ -1,0 +1,264 @@
+.main {
+    margin-left: 23rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: var(--body);
+}
+
+/* ── Top Bar ── */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pageTitle {
+    color: var(--text-main);
+    font-family: var(--headings);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 0.3rem 0;
+}
+
+.pageSubtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.pageSubtitle strong {
+    color: var(--text-main);
+}
+
+.rightSide {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.4rem;
+}
+
+.icon {
+    width: 1.6rem;
+    height: 1.8rem;
+}
+
+.lineIcon {
+    height: 1.7rem;
+}
+
+.username {
+    color: var(--text-main);
+    margin: 0;
+}
+
+.userIcon {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* ── New Client Card ── */
+.newClientCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border-col);
+    border-radius: 1rem;
+    background-color: var(--bg-card);
+    padding: 1.6rem 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.newClientLeft {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.newClientCircle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #2E352B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.plusSquareImg {
+    width: 1.8rem;
+    height: 1.8rem;
+    opacity: 0.8;
+}
+
+.newClientTitle {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+    font-family: var(--headings);
+}
+
+.newClientSub {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.addBtn {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid var(--green);
+    border-radius: 0.5rem;
+    background: transparent;
+    color: var(--green);
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.addBtn:hover {
+    background-color: rgba(206, 251, 224, 0.08);
+}
+
+/* ── All Clients Card ── */
+.allClientsCard {
+    border: 1px solid var(--border-col);
+    border-radius: 1rem;
+    background-color: var(--bg-card);
+    padding: 1.6rem 2rem;
+    margin-right: 2rem;
+}
+
+.allClientsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.allClientsTitle {
+    color: var(--text-main);
+    font-family: var(--headings);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.tableActions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.actionBtn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-family: var(--body);
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.4rem;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.actionBtn:hover {
+    color: var(--text-main);
+    background-color: var(--bg-row);
+}
+
+/* ── Table ── */
+.tableHeader {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr;
+    padding: 0 0.5rem 0.8rem 0.5rem;
+    border-bottom: 1px solid var(--border-col2);
+    color: var(--text-dim);
+    font-size: 0.82rem;
+}
+
+.tableBody {
+    display: flex;
+    flex-direction: column;
+}
+
+.clientRow {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr;
+    align-items: center;
+    padding: 1.1rem 0.5rem;
+    border-bottom: 1px solid var(--border-col2);
+    transition: background-color 0.15s;
+}
+
+.clientRow:last-child {
+    border-bottom: none;
+}
+
+.clientRow:hover {
+    background-color: var(--bg-row2);
+    border-radius: 0.5rem;
+}
+
+.colDetails { display: flex; flex-direction: column; }
+.colSales   { display: flex; flex-direction: column; }
+.colReport  { display: flex; align-items: center; }
+.colCategory{ display: flex; align-items: center; }
+
+.clientName {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0 0 0.2rem 0;
+}
+
+.clientUpdated {
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.salesAmount {
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin: 0 0 0.2rem 0;
+}
+
+.salesDate {
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.eyeIcon {
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.eyeIcon:hover {
+    opacity: 1;
+}
+
+.categoryBadge {
+    border: 1px solid var(--border-col);
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-main);
+    letter-spacing: 0.05em;
+}

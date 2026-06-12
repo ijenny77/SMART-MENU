@@ -1,0 +1,148 @@
+.wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* ── Avatar button ── */
+.avatarBtn {
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #3B8019;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+    transition: opacity 0.15s;
+}
+
+.avatarBtn:hover { opacity: 0.85; }
+
+.avatarImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.avatarLetter {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.88rem;
+    font-family: var(--body);
+    line-height: 1;
+}
+
+/* ── Dropdown panel ── */
+.dropdown {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    right: 0;
+    width: 14rem;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 0.9rem;
+    padding: 0.5rem 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    z-index: 200;
+    animation: fadeIn 0.12s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Header (user info) ── */
+.dropHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 1rem 0.8rem 1rem;
+}
+
+.dropAvatar {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: #3B8019;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.dropName {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.1rem 0;
+    font-family: var(--body);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropEmail {
+    font-size: 0.7rem;
+    color: #666666;
+    margin: 0;
+    font-family: var(--body);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ── Divider ── */
+.divider {
+    height: 1px;
+    background-color: #2a2a2a;
+    margin: 0.3rem 0;
+}
+
+/* ── Menu items ── */
+.item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    background: transparent;
+    border: none;
+    color: #cccccc;
+    font-family: var(--body);
+    font-size: 0.88rem;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.12s, color 0.12s;
+}
+
+.item:hover {
+    background-color: #252525;
+    color: #ffffff;
+}
+
+.itemIcon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    opacity: 0.75;
+}
+
+.item:hover .itemIcon { opacity: 1; }
+
+/* ── Logout item ── */
+.itemLogout {
+    color: #f87171;
+}
+
+.itemLogout:hover {
+    background-color: rgba(248, 113, 113, 0.08);
+    color: #f87171;
+}
+
+.itemLogout .itemIcon { opacity: 1; stroke: #f87171; }

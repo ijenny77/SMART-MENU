@@ -1,0 +1,401 @@
+.mainMenus {
+    margin-left: 23rem;
+    padding-top: 3rem;
+}
+
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+}
+
+.textMenus {
+    color: var(--text-main);
+    font-family: var(--body);
+}
+
+.pageTitle {
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin: 0 0 0.3rem 0;
+}
+
+.pageTitleSub {
+    font-weight: 400;
+}
+
+.pageSubtitle {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.rightSide {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.3rem;
+}
+
+.icons {
+    width: 1.6rem;
+    height: 1.8rem;
+    margin-left: 0.9rem;
+}
+
+.lineIcon {
+    height: 1.7rem;
+}
+
+.username {
+    color: var(--text-main);
+    margin: 0;
+}
+
+.iconsButton {
+    width: 2rem;
+    height: 1.8rem;
+    margin-left: 0.9rem;
+}
+
+/* Content Card */
+.contentCard {
+    margin-top: 2.5rem;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid var(--border-col);
+    border-radius: 1rem;
+    background-color: var(--bg-card);
+    padding: 2rem 2.5rem;
+    display: flex;
+    gap: 2rem;
+    font-family: var(--body);
+}
+
+/* Left Section */
+.leftSection {
+    flex: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.menusHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.menusTitle {
+    color: var(--text-main);
+    font-family: var(--headings);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.categoryTabs {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.categoryBtn {
+    background: transparent;
+    border: 1px solid var(--border-col);
+    border-radius: 0.5rem;
+    color: var(--text-main);
+    padding: 0.5rem 1.1rem;
+    cursor: pointer;
+    font-family: var(--body);
+    font-size: 0.85rem;
+    transition: border-color 0.2s;
+}
+
+.categoryBtn:hover {
+    border-color: var(--green);
+}
+
+.categoryActive {
+    background-color: var(--green);
+    color: var(--black);
+    border-color: var(--green);
+    font-weight: 600;
+}
+
+.moreBtn {
+    display: block;
+    margin: auto auto 0;
+    background-color: var(--green);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--black);
+    padding: 0.7rem 2.5rem;
+    font-weight: 700;
+    font-family: var(--buttons);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.moreBtn:hover {
+    background-color: var(--dgreen);
+}
+
+.timestamp {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.menuList {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.menuItemCard {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    border: 1px solid var(--border-col);
+    border-radius: 0.8rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-row);
+}
+
+.menuItemImage {
+    width: 4.5rem;
+    height: 4.5rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+}
+
+.menuItemInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.itemIngredients {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    margin: 0;
+}
+
+.itemName {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.itemPrice {
+    color: var(--green);
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Right Section */
+.rightSection {
+    flex: 1;
+    border-left: 1px solid var(--border-col);
+    padding-left: 2rem;
+}
+
+.addItemHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.addItemIcon {
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 2px solid var(--border-col);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    font-size: 1.4rem;
+    font-weight: 300;
+    flex-shrink: 0;
+}
+
+.addItemTitle {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 0.2rem 0;
+    font-family: var(--headings);
+}
+
+.addItemSubtitle {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.uploadArea {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.uploadBox {
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 1.5px dashed var(--border-col);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: var(--bg-row);
+    transition: border-color 0.2s;
+    flex-shrink: 0;
+}
+
+.uploadBox:hover {
+    border-color: var(--green);
+}
+
+.uploadPlus {
+    color: var(--text-faint);
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.uploadPreview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.4rem;
+}
+
+.uploadTitle {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+}
+
+.uploadSubtitle {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+/* Form */
+.formFields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formInput {
+    background-color: var(--bg-row);
+    border: 1px solid var(--border-col);
+    border-radius: 0.5rem;
+    color: var(--text-main);
+    padding: 0.85rem 1rem;
+    font-family: var(--body);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formInput::placeholder {
+    color: var(--text-faint);
+}
+
+.formInput:focus {
+    border-color: var(--green);
+}
+
+.categorySelector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.categorySelectorTitle {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.categorySelectorSub {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    margin: 0 0 0.4rem 0;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding: 0.3rem 0;
+}
+
+.radioCircle {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 2px solid var(--border-col);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.radioChecked {
+    border-color: var(--green);
+    background-color: var(--green);
+}
+
+.radioCheck {
+    color: var(--black);
+    font-size: 0.7rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.radioText {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.addButton {
+    background-color: var(--green);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--black);
+    padding: 0.85rem 1rem;
+    font-weight: 900;
+    font-family: var(--buttons);
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.addButton:hover {
+    background-color: var(--dgreen);
+}

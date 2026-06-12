@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap');/*Halant*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&family=Space+Grotesk:wght@400;500;600;700&display=swap');/**/
+:root{
+    --white:#FFFFFF;
+    --green:#CEFBE0;
+    --dgreen:#B2E8C7;
+    --greentree:#3B8019;
+    --black:#000000;
+    --red:#FD0404;
+    --Rtables:#914D4D;
+    --size24:1.1rem;
+    --size16:0.7rem;
+    --font-halant:"Halant",serif;
+    --headings: 'Halant', serif;
+    --body:'DM Sans', sans-serif;
+    --buttons:'Space Grotesk', sans-serif;
+
+    /* Theme-aware variables (dark by default) */
+    --bg-page:    #000000;
+    --bg-card:    #111111;
+    --bg-row:     #1a1a1a;
+    --bg-row2:    #161616;
+    --bg-btn:     #2a2a2a;
+    --border-col: #3a3a3a;
+    --border-col2:#2a2a2a;
+    --text-main:  #ffffff;
+    --text-muted: #888888;
+    --text-dim:   #666666;
+    --text-faint: #555555;
+    --text-sub:   #aaaaaa;
+    --icon-filter: none;
+    --green-text: #CEFBE0;
+}
+
+[data-theme="light"] {
+    --bg-page:    #f5f7fa;
+    --bg-card:    #ffffff;
+    --bg-row:     #f0f2f5;
+    --bg-row2:    #e8eaed;
+    --bg-btn:     #e2e5e9;
+    --border-col: #e0e0e0;
+    --border-col2:#d0d0d0;
+    --text-main:  #111111;
+    --text-muted: #666666;
+    --text-dim:   #777777;
+    --text-faint: #888888;
+    --text-sub:   #555555;
+    --icon-filter: invert(1) brightness(0);
+    --green-text: #3B8019;
+}
+
+body{
+    color: var(--text-main);
+    background-color: var(--bg-page);
+    min-height: 100vh;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--bg-row) inset !important;
+    -webkit-text-fill-color: var(--text-main) !important;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: var(--text-main);
+}

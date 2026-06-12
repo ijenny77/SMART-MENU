@@ -1,0 +1,136 @@
+.pageWrapper { display: flex; min-height: 100vh; background-color: var(--bg-page); }
+
+.main {
+    margin-left: 20%;
+    flex: 1;
+    padding: 2rem 2.4rem 3rem 2.4rem;
+    font-family: var(--body);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-sizing: border-box;
+}
+
+/* ── Header ── */
+.header { display: flex; align-items: center; gap: 1rem; }
+
+.backBtn {
+    width: 2rem; height: 2rem;
+    border: 1px solid var(--border-col); border-radius: 0.5rem;
+    background: transparent; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; color: var(--text-main); flex-shrink: 0;
+}
+.backBtn svg { width: 1rem; height: 1rem; }
+.backBtn:hover { background: var(--bg-row); }
+
+.pageTitle { font-family: var(--headings); font-size: 1.5rem; font-weight: 900; color: var(--text-main); margin: 0 0 0.15rem 0; }
+.pageSub   { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+
+/* ── Panels ── */
+.panels { display: flex; gap: 1rem; align-items: flex-start; flex: 1; }
+
+/* ── Left nav ── */
+.navPanel {
+    width: 13rem; flex-shrink: 0;
+    background: var(--bg-card); border: 1px solid var(--border-col);
+    border-radius: 1rem; padding: 0.5rem;
+    display: flex; flex-direction: column; gap: 0.15rem;
+}
+
+.navItem {
+    display: flex; align-items: center; gap: 0.7rem;
+    padding: 0.65rem 0.9rem; border-radius: 0.6rem;
+    border: none; background: transparent;
+    color: var(--text-muted); font-family: var(--body);
+    font-size: 0.88rem; font-weight: 500;
+    cursor: pointer; text-align: left; width: 100%;
+    transition: background-color 0.12s, color 0.12s;
+}
+.navItem:hover    { background: var(--bg-row); color: var(--text-main); }
+.navItemActive    { background: var(--bg-row); color: var(--text-main); font-weight: 700; }
+
+.navIcon {
+    width: 1.3rem;
+    height: 1.3rem;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: var(--icon-filter);
+}
+
+/* ── Right content ── */
+.contentPanel { flex: 1; display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+
+/* ── Section ── */
+.section {
+    background: var(--bg-card); border: 1px solid var(--border-col);
+    border-radius: 1rem; padding: 1.4rem 1.6rem;
+    display: flex; flex-direction: column;
+}
+.sectionTitle { font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin: 0 0 0.2rem 0; }
+.sectionSub   { font-size: 0.78rem; color: var(--text-muted); margin: 0 0 1.2rem 0; }
+
+/* ── Select rows ── */
+.selectList { display: flex; flex-direction: column; }
+
+.selectRow {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.75rem 0; border-bottom: 1px solid var(--border-col2); gap: 1rem;
+}
+.selectRow:last-child { border-bottom: none; }
+.selectLabel { font-size: 0.85rem; color: var(--text-main); font-weight: 500; flex: 1; }
+
+.selectInput {
+    background: var(--bg-row); border: 1px solid var(--border-col);
+    border-radius: 0.5rem; color: var(--text-main);
+    font-family: var(--body); font-size: 0.82rem;
+    padding: 0.45rem 0.9rem; outline: none; cursor: pointer; min-width: 13rem;
+}
+.selectInput:focus { border-color: var(--greentree); }
+
+/* ── Toggle rows ── */
+.toggleList { display: flex; flex-direction: column; }
+
+.toggleRow {
+    display: flex; align-items: center; gap: 0.9rem;
+    padding: 0.85rem 0; border-bottom: 1px solid var(--border-col2);
+}
+.toggleRow:last-child { border-bottom: none; }
+
+.toggleIcon {
+    width: 2.2rem; height: 2.2rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+
+.toggleIconImg {
+    width: 2.2rem;
+    height: 2.2rem;
+    object-fit: contain;
+}
+.toggleText { flex: 1; }
+.toggleLabel { font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin: 0 0 0.15rem 0; }
+.toggleSub   { font-size: 0.72rem; color: var(--text-muted); margin: 0; }
+
+/* ── Toggle switch ── */
+.toggle {
+    width: 2.6rem; height: 1.4rem; background: var(--border-col);
+    border-radius: 999px; position: relative; cursor: pointer; flex-shrink: 0;
+    transition: background-color 0.2s;
+}
+.toggleOn { background: #3B8019; }
+.toggleThumb {
+    position: absolute; top: 0.18rem; left: 0.18rem;
+    width: 1.05rem; height: 1.05rem; background: #fff; border-radius: 50%;
+    transition: transform 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.toggleOn .toggleThumb { transform: translateX(1.2rem); }
+
+/* ── Save button ── */
+.saveBtn {
+    width: 100%; padding: 0.85rem;
+    background: var(--greentree); color: #fff;
+    border: none; border-radius: 0.7rem;
+    font-family: var(--buttons); font-size: 0.95rem; font-weight: 700;
+    cursor: pointer; transition: opacity 0.15s; margin-top: 0.5rem;
+}
+.saveBtn:hover { opacity: 0.85; }

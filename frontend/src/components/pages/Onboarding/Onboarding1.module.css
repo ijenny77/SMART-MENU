@@ -1,0 +1,139 @@
+.rightPanel{
+    margin-top: 3rem;
+    font-family: var(--body);
+    border: 1px solid var(--border-col);
+    border-radius: 1.5rem;
+    padding: 2rem 2.5rem 2rem 2.5rem;
+    margin-left: 1.5rem;
+    width: 41rem;
+    color: var(--text-main);
+    background-color: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.restoText{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+}
+.shopIconBox{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.restoTitle{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-main);
+}
+.nameRow{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+.fieldGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.fieldLabel{
+    color: var(--text-main);
+    font-size: 0.9rem;
+    margin: 0;
+}
+.formInput{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--border-col);
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.9rem;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    outline: none;
+    box-sizing: border-box;
+}
+.formInput::placeholder{
+    color: var(--text-dim);
+}
+.formInput:focus{
+    border-color: var(--text-faint);
+}
+.phoneRow{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-col);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: transparent;
+}
+.countrySelect{
+    background-color: var(--bg-row);
+    color: var(--text-main);
+    border: none;
+    border-right: 1px solid var(--border-col);
+    padding: 1.1rem 0.6rem;
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.countrySelect option{
+    background-color: var(--bg-row);
+}
+.phoneInput{
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    padding: 0.4rem 0.9rem;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    outline: none;
+}
+.phoneInput::placeholder{
+    color: var(--text-dim);
+}
+.divider{
+    border: none;
+    border-top: 1px solid var(--border-col);
+    margin: 0.4rem 0;
+}
+.btnRow{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+.cancelBtn{
+    background-color: var(--bg-row);
+    color: var(--text-main);
+    border: 1px solid var(--border-col);
+    border-radius: 0.5rem;
+    padding: 0.65rem 2rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-family: var(--body);
+}
+.cancelBtn:hover{
+    background-color: var(--bg-btn);
+}
+.continueBtn{
+    background-color: var(--greentree);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.65rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--body);
+}
+.continueBtn:hover{
+    background-color: #3a9e3a;
+}

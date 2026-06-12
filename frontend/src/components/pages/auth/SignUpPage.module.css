@@ -1,0 +1,45 @@
+.mainSignUpPage{
+    display: flex;
+    color: var(--text-main);
+    padding-top: 4rem;
+    margin-left: 4rem;
+}
+.coffeeCombo{
+    max-width: 35%;
+    margin-top: 3.5rem;
+    height: 30%;
+}
+.welcomeSmartMenu{
+    font-size:2.5rem;
+    font-weight:700;
+    display:flex;
+    flex-direction:column;
+    margin-bottom:3rem;
+    font-family: var(--headings);
+}
+.textSide{
+    padding-top: 2rem;
+}
+.manageRestaurant{
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    font-family: var(--body);
+}
+.icons{
+    width: 3rem;
+}
+.card1,.card2,.card3{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    font-family: var(--body);
+}
+.headings{
+    font-weight: 900;
+    font-size: var(--size24);
+}
+.paragraph{
+    color: var(--text-muted);
+    font-size: var(--size24);
+}

@@ -1,0 +1,49 @@
+.mainFooter{
+    width: 100%;
+    color: var(--text-main);
+    margin-top:73rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    width: 4rem;
+}
+.smartMenu{
+    color: var(--greentree);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    font-family: var(--headings);
+}
+.hrLine {
+  width: 85%;
+  max-width: 85rem;
+  height: 1px;
+  border: none;
+  margin: 1.9rem 4rem;
+  background-color: var(--border-col);
+}
+.footer{
+    display: flex;
+    gap: 14rem;
+    align-items: center;
+    margin-left: 0rem;
+    padding-bottom: 1.5rem;
+}
+.leftSection{
+    display: flex;
+    gap: 0.4rem;
+}
+.footerLinks{
+    display: flex;
+    gap: 1.5rem;
+    font-family: var(--body);
+}
+.footerLinks a{
+    text-decoration: none;
+    color: var(--green);
+}
+.copyright{
+    font-family: var(--body);
+}

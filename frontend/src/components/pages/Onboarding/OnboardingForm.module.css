@@ -1,0 +1,403 @@
+/* ── Full-page wrapper ── */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-main);
+  padding: 2rem;
+}
+
+/* ── Card ── */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-col);
+  border-radius: 1.5rem;
+  padding: 2.2rem 2.5rem;
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color: var(--text-main);
+  font-family: var(--body);
+}
+
+/* ── Brand header ── */
+.brand {
+  font-family: var(--headings);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--greentree);
+  margin: 0 0 0.2rem 0;
+  letter-spacing: -0.02em;
+}
+
+/* ── Step bar ── */
+.stepBar {
+  display: flex;
+  align-items: center;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stepNum {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background-color: var(--bg-row);
+  color: var(--text-dim);
+  border: 1.5px solid var(--border-col);
+  flex-shrink: 0;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.done .stepNum {
+  background-color: var(--greentree);
+  color: #fff;
+  border-color: var(--greentree);
+}
+
+.current .stepNum {
+  background-color: var(--greentree);
+  color: #fff;
+  border-color: var(--greentree);
+  box-shadow: 0 0 0 3px rgba(74, 175, 74, 0.2);
+}
+
+.stepLabel {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.done .stepLabel,
+.current .stepLabel {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.connector {
+  flex: 1;
+  height: 1.5px;
+  background-color: var(--border-col);
+  margin: 0 0.7rem;
+  transition: background-color 0.2s;
+}
+
+.connectorDone {
+  background-color: var(--greentree);
+}
+
+/* ── Section header ── */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.sectionIcon {
+  width: 2.2rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sectionSub {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  margin: 0.1rem 0 0 0;
+}
+
+/* ── Field groups ── */
+.nameRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fieldLabel {
+  font-size: 0.84rem;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.formInput {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid var(--border-col);
+  border-radius: 0.5rem;
+  padding: 0.65rem 0.9rem;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  outline: none;
+  box-sizing: border-box;
+  font-family: var(--body);
+  transition: border-color 0.15s;
+}
+
+.formInput::placeholder { color: var(--text-dim); }
+.formInput:focus { border-color: var(--greentree); }
+
+/* ── Phone row ── */
+.phoneRow {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-col);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.phoneRow:focus-within { border-color: var(--greentree); }
+
+.countrySelect {
+  background-color: var(--bg-row);
+  color: var(--text-main);
+  border: none;
+  border-right: 1px solid var(--border-col);
+  padding: 0.68rem 0.6rem;
+  font-size: 0.88rem;
+  outline: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.countrySelect option { background-color: var(--bg-row); }
+
+.phoneInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  outline: none;
+  font-family: var(--body);
+}
+
+.phoneInput::placeholder { color: var(--text-dim); }
+
+/* ── Select wrapper (Onboarding2) ── */
+.selectWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: 1px solid var(--border-col);
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  transition: border-color 0.15s;
+}
+
+.selectWrapper:focus-within { border-color: var(--greentree); }
+.selectWrapper img { width: 1.2rem; opacity: 0.65; flex-shrink: 0; }
+
+.selectWrapper select {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  font-family: var(--body);
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.selectWrapper select option { background-color: var(--bg-card); }
+
+/* ── Time row ── */
+.timeRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.timeBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border-col);
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  transition: border-color 0.15s;
+}
+
+.timeBox:focus-within { border-color: var(--greentree); }
+
+.timeLabel {
+  color: var(--text-dim);
+  font-size: 0.83rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.timeSelect {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  font-family: var(--body);
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.timeSelect option { background-color: var(--bg-card); }
+
+/* ── Upload box ── */
+.uploadBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px dashed var(--border-col);
+  border-radius: 0.7rem;
+  padding: 1.4rem;
+  cursor: pointer;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  text-align: center;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.uploadBox:hover {
+  border-color: var(--greentree);
+  color: var(--greentree);
+}
+
+/* ── Category pills (Onboarding3) ── */
+.categoryRow {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.categoryBtn {
+  background-color: var(--bg-row);
+  color: var(--text-dim);
+  border: 1px solid var(--border-col);
+  border-radius: 2rem;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.84rem;
+  cursor: pointer;
+  font-family: var(--body);
+  transition: all 0.15s;
+}
+
+.activeCategoryBtn {
+  background-color: var(--greentree);
+  color: #fff;
+  border-color: var(--greentree);
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.itemBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1rem;
+  border: 1px solid var(--border-col);
+  border-radius: 0.7rem;
+  background-color: var(--bg-row);
+}
+
+.itemIndex {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* ── Divider ── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border-col);
+  margin: 0.2rem 0;
+}
+
+/* ── Action buttons ── */
+.btnRow {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cancelBtn {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-col);
+  border-radius: 0.5rem;
+  padding: 0.65rem 1.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: var(--body);
+  transition: background-color 0.15s;
+}
+
+.cancelBtn:hover { background-color: var(--bg-row); }
+
+.continueBtn {
+  background-color: var(--greentree);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.65rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--body);
+  transition: opacity 0.15s;
+}
+
+.continueBtn:hover { opacity: 0.88; }
+
+.addMoreBtn {
+  background: transparent;
+  color: var(--greentree);
+  border: 1px solid var(--greentree);
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+  font-family: var(--body);
+  margin-right: auto;
+  transition: background-color 0.15s;
+}
+
+.addMoreBtn:hover { background-color: rgba(74,175,74,0.08); }

@@ -1,0 +1,165 @@
+.mainOperations{
+    margin-left: 23rem;
+    padding-top: 3rem;
+}
+.textOperations{
+    color: var(--text-main);
+    font-family: var(--body);
+}
+.rightSide {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.icons {
+    width: 1.6rem;
+    height: 1.8rem;
+    margin-left: 0.9rem;
+}
+.lineIcon {
+    height: 1.7rem;
+}
+.username {
+    margin-top: 0.2rem;
+    color: var(--text-main);
+    font-family: var(--body);
+}
+.iconsButton {
+    width: 2rem;
+    height: 1.8rem;
+    margin-left: 0.9rem;
+}
+.statsBoxes{
+    display: flex;
+    color: var(--text-main);
+    gap: 1rem;
+    font-family: var(--body);
+    margin-top: 3.5rem;
+}
+.statsImg{
+    width: 3.5em;
+    height: 8vh;
+}
+.statsCard{
+    display: flex;
+    gap: 0.4rem ;
+    padding: 2rem;
+    min-width: 20%;
+    border: 1px solid var(--border-col);
+    border-radius: 1rem;
+    background-color: var(--bg-card);
+}
+.valueStats{
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+.badgeStats{
+    color: var(--greentree);
+    font-weight: 600;
+}
+.operationsBoxes{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.operationCard{
+    border: 1px solid var(--border-col);
+    border-radius: 1rem;
+    background-color: var(--bg-card);
+    display: flex;
+    gap:1rem;
+    color: var(--text-main);
+    padding: 1.5rem;
+    width: 37%;
+    font-family: var(--body);
+    margin-top: 1rem;
+}
+.operationsImage{
+    width: 5rem;
+    height: 8vh;
+    margin-top: 3.1rem;
+}
+.operationsTexts{
+    margin-top: 1.3rem;
+}
+.operationsLabel{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.operationsText{
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+.realOperationsImage{
+    width: 10rem;
+    height: 20vh;
+    margin-top: 1.5rem;
+}
+.operationsButton{
+    background-color: var(--green);
+    border:none;
+    border-radius: 0.5rem;
+    color: var(--black);
+    margin-top: 2rem;
+    padding:0.8rem 1rem;
+    font-weight: 900;
+    font-family: var(--buttons);
+}
+.alertsSection {
+    margin-top: 2rem;
+    border: 1px solid var(--border-col2);
+    border-radius: 1rem;
+    background-color: var(--bg-card);
+    padding: 1.5rem;
+    width: 22rem;
+    font-family: var(--body);
+}
+.alertsHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+}
+.alertBell {
+    font-size: 1.3rem;
+    filter: hue-rotate(80deg);
+}
+.alertsTitle {
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+.alertRow {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: var(--bg-row);
+    border: 1px solid var(--border-col2);
+    border-radius: 0.7rem;
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+}
+.alertRow:hover {
+    border-color: var(--border-col);
+}
+.warningIcon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+.successIcon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+.alertText {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    margin: 0;
+    flex: 1;
+}
+.alertArrow {
+    color: var(--text-faint);
+    font-size: 1.2rem;
+}

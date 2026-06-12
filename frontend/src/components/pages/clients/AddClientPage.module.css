@@ -1,0 +1,220 @@
+.main {
+    margin-left: 23rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    font-family: var(--body);
+}
+
+/* ── Top Bar ── */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.breadcrumb {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.breadcrumbLink {
+    color: var(--green);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.breadcrumbLink:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbSep {
+    color: var(--text-main);
+    font-weight: 400;
+}
+
+.rightSide {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.icon {
+    width: 1.6rem;
+    height: 1.8rem;
+}
+
+.lineIcon {
+    height: 1.7rem;
+}
+
+.username {
+    color: var(--text-main);
+    margin: 0;
+}
+
+.userIcon {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* ── Page Header ── */
+.pageHeader {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    margin-bottom: 3rem;
+}
+
+.headerCircle {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #2E352B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.storeIcon {
+    width: 2.4rem;
+    height: 2.4rem;
+    opacity: 0.85;
+}
+
+.headerTitle {
+    color: var(--text-main);
+    font-family: var(--headings);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 0.3rem 0;
+}
+
+.headerSub {
+    color: var(--green);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ── Form ── */
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 4rem;
+    padding-right: 2rem;
+    margin-bottom: 3rem;
+}
+
+.formColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.fieldGroup {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.fieldIconImg {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 1.6rem;
+}
+
+.fieldIcon {
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: #2E352B;
+    border: 1px solid var(--border-col);
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    flex-shrink: 0;
+    margin-top: 1.6rem;
+}
+
+.fieldContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.fieldLabel {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: var(--body);
+}
+
+.fieldInput {
+    background-color: var(--bg-row);
+    border: 1px solid var(--border-col);
+    border-radius: 0.6rem;
+    color: var(--text-main);
+    padding: 0.8rem 1rem;
+    font-family: var(--body);
+    font-size: 0.88rem;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.fieldInput::placeholder {
+    color: var(--text-faint);
+}
+
+.fieldInput:focus {
+    border-color: var(--green);
+}
+
+/* date input colour fix on dark theme */
+.fieldInput[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+    cursor: pointer;
+}
+
+.fieldSelect {
+    appearance: none;
+    cursor: pointer;
+}
+
+.fieldSelect option {
+    background-color: var(--bg-row);
+    color: var(--text-main);
+}
+
+/* ── Submit ── */
+.submitRow {
+    display: flex;
+    justify-content: center;
+    padding-right: 2rem;
+}
+
+.submitBtn {
+    background-color: var(--green);
+    border: none;
+    border-radius: 0.8rem;
+    color: var(--black);
+    padding: 1rem 5rem;
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: var(--buttons);
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+    background-color: var(--dgreen);
+}

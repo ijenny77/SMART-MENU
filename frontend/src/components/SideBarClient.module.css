@@ -1,0 +1,315 @@
+.mainSideBar {
+    background-color: var(--green);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    overflow-y: auto;
+    z-index: 100;
+    height: 100vh;
+    padding: 1.6rem 1.2rem 1.8rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--headings);
+    box-sizing: border-box;
+}
+
+.logo {
+    font-family: var(--headings);
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--greentree);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding-bottom: 1.2rem;
+    border-bottom: 3px solid var(--greentree);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.navGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.65rem 0.8rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2a2a2a;
+    border-left: 3px solid transparent;
+    transition: background-color 0.15s ease;
+}
+
+.navItem:hover {
+    background-color: var(--dgreen);
+}
+
+.active {
+    background-color: var(--dgreen);
+    color: var(--greentree);
+    font-weight: 600;
+    border-left-color: var(--greentree);
+}
+
+.navIcon {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.navIcon img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+}
+
+.activeIconFilter {
+    filter: invert(37%) sepia(47%) saturate(600%) hue-rotate(72deg) brightness(95%);
+}
+
+.divider {
+    border-top: 1.5px solid rgba(59, 128, 25, 0.3);
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.2rem;
+}
+
+.upgradeCard {
+    background-color: var(--green);
+    border: 1px rgb(178, 178, 178) solid;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    margin-top: auto;
+}
+
+.upgradeCard img {
+    width: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.upgradeTitle {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1a1a1a;
+    margin-bottom: 0.4rem;
+}
+
+.upgradeDesc {
+    color: var(--text-dim);
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.upgradeBtn {
+    background-color: var(--dgreen);
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.6rem 0.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 1px 2px 5px 1px grey;
+    width: 90%;
+    font-family: var(--buttons);
+    font-size: 0.9rem;
+}
+
+/* ── User profile card ── */
+.userCard {
+    position: relative;
+    margin-top: 0.8rem;
+    border-top: 1.5px solid rgba(59, 128, 25, 0.3);
+    padding-top: 0.8rem;
+}
+
+.userCardInner {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.userCardInner:hover {
+    background-color: var(--dgreen);
+}
+
+.userAvatar {
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    background-color: #3B8019;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.userAvatarImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.userAvatarLetter {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.88rem;
+    font-family: var(--body);
+    line-height: 1;
+}
+
+.userInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.userName {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.userEmail {
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.userChevron {
+    width: 0.85rem;
+    height: 0.85rem;
+    flex-shrink: 0;
+    color: var(--text-dim);
+}
+
+/* ── Popup (opens upward) ── */
+.userPopup {
+    position: absolute;
+    bottom: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 0.9rem;
+    padding: 0.5rem 0;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.45);
+    z-index: 200;
+    animation: slideUp 0.12s ease;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.popupHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 1rem 0.8rem 1rem;
+}
+
+.popupAvatar {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: #3B8019;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.popupName {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.1rem 0;
+    font-family: var(--body);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.popupEmail {
+    font-size: 0.7rem;
+    color: #666;
+    margin: 0;
+    font-family: var(--buttons);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.popupDivider {
+    height: 1px;
+    background-color: #2a2a2a;
+    margin: 0.3rem 0;
+}
+
+.popupItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    background: transparent;
+    border: none;
+    color: #ccc;
+    font-family: var(--body);
+    font-size: 0.88rem;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.12s, color 0.12s;
+}
+
+.popupItem:hover {
+    background-color: #252525;
+    color: #fff;
+}
+
+.popupIcon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    opacity: 0.75;
+}
+
+.popupItem:hover .popupIcon { opacity: 1; }
+
+.popupLogout { color: #f87171; }
+
+.popupLogout:hover {
+    background-color: rgba(248, 113, 113, 0.08);
+    color: #f87171;
+}
+
+.popupLogout .popupIcon { opacity: 1; }

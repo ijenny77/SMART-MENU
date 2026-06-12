@@ -1,0 +1,73 @@
+.mainOnboarding{
+    display: flex;
+    margin-left: 18.6rem;
+    margin-bottom: 1rem;
+}
+.leftPanel{
+    margin-top: 3rem;
+    font-family: var(--body);
+    border: 1px solid var(--border-col);
+    border-radius: 1.5rem;
+    padding:3rem 1rem 2rem 1rem;
+    margin-left: 3rem;
+    background-color: var(--bg-card);
+    width: 21rem;
+    max-height: 47vh;
+}
+.step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 12px;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+}
+.activeStep {
+    border-left: 3px solid #4caf50;
+}
+.stepNum {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-col);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    flex-shrink: 0;
+}
+.activeStepNum {
+    background-color: var(--green);
+    color: var(--greentree);
+    font-weight: 900;
+    border-color: var(--green);
+}
+.stepTitle {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 0 4px;
+}
+.stepDesc {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 0;
+}
+.starsBox{
+    display: flex;
+    gap:1rem;
+    border: 1px solid var(--greentree);
+    border-radius: 1rem;
+    padding:1.2rem 0.8rem;
+    width:70%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.stars{
+    width: 2rem;
+    height: 2rem;
+}
+.textStars{
+    color: var(--text-main);
+    font-size: 0.7rem;
+}

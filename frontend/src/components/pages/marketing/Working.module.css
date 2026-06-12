@@ -1,0 +1,41 @@
+.cards{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}
+.card{
+    background-color: var(--green);
+    border-radius: 1rem;
+    padding: 0.6rem 4rem;
+    width: 10%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.card:hover{
+    box-shadow: 0px 2px 5px 2px var(--dgreen);
+}
+.step{
+    margin: 1rem;
+    font-weight: 900;
+    font-family: var(--headings);
+    color: var(--black);
+}
+.title{
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 0.9rem;
+    font-family: var(--body);
+    color: var(--black);
+}
+.icon{
+    width: 8vw;
+}
+.workingWay{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin:0 0 3rem 0;
+    font-family: var(--headings);
+}

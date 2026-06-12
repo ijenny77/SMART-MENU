@@ -1,0 +1,188 @@
+.main {
+    margin-left: 23rem;
+    padding: 0 2rem 3rem 0;
+    color: var(--text-main);
+    font-family: var(--body);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Top bar ── */
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0 2rem 0;
+    margin-bottom: 0.5rem;
+}
+.pageTitle    { font-family: var(--headings); font-size: 1.7rem; font-weight: 900; color: var(--text-main); margin: 0 0 0.2rem 0; }
+.pageSubtitle { color: var(--text-muted); font-size: 0.85rem; margin: 0; }
+.rightSide    { display: flex; align-items: center; gap: 0.8rem; }
+.icon         { width: 1.6rem; height: 1.8rem; cursor: pointer; }
+.lineIcon     { height: 1.7rem; }
+.username     { color: var(--text-main); font-size: 0.9rem; margin: 0; }
+
+/* ── Columns ── */
+.columns { display: flex; gap: 1.5rem; align-items: flex-start; }
+.leftCol, .rightCol { flex: 1; display: flex; flex-direction: column; gap: 1.5rem; }
+
+/* ── Shared card ── */
+.profileInformation, .accountSecurity, .accountActions, .preferences {
+    border: 1px solid var(--border-col);
+    border-radius: 1.2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.topProfileInformation { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+.imageCameraUser { width: 4rem; flex-shrink: 0; }
+
+.fieldLabel { color: var(--text-main); font-size: 0.88rem; font-weight: 500; margin-bottom: -0.3rem; }
+
+.inputs {
+    border: 1px solid var(--border-col);
+    background-color: var(--bg-row);
+    padding: 0.9rem 1rem;
+    border-radius: 0.6rem;
+    color: var(--text-main);
+    font-family: var(--body); font-size: 0.9rem;
+    width: 100%; box-sizing: border-box;
+}
+.inputs:-webkit-autofill,
+.inputs:-webkit-autofill:hover,
+.inputs:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px var(--bg-row) inset !important;
+    -webkit-text-fill-color: var(--text-main) !important;
+    caret-color: var(--text-main);
+}
+
+.saveChanges {
+    width: fit-content;
+    background-color: var(--green);
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.8rem;
+    font-family: var(--buttons); font-weight: 700;
+    border: none; cursor: pointer; margin-top: 0.4rem;
+}
+
+.securityTitle { font-weight: 900; font-size: 1rem; margin: 0; }
+.securitySub   { color: var(--text-muted); font-size: 0.85rem; margin: 0; }
+
+.securityRow {
+    display: flex; align-items: center;
+    background-color: var(--bg-row);
+    border: 1px solid var(--border-col);
+    border-radius: 0.7rem;
+    padding: 0.85rem 1rem; gap: 1rem;
+}
+.securityLabel  { flex: 1; font-size: 0.9rem; font-weight: 500; color: var(--text-main); }
+.passwordDots   { color: var(--text-muted); font-size: 1rem; letter-spacing: 0.15em; flex: 1; }
+.enabledBadge   { color: var(--green-text); font-size: 0.85rem; font-weight: 600; flex: 1; }
+.disabledBadge  { color: var(--text-muted); font-size: 0.85rem; font-weight: 600; flex: 1; }
+
+.securityBtn {
+    background-color: var(--bg-btn);
+    border: 1px solid var(--border-col);
+    border-radius: 0.5rem; color: var(--green-text);
+    padding: 0.4rem 0.9rem;
+    font-family: var(--body); font-size: 0.82rem; font-weight: 600;
+    cursor: pointer; display: flex; align-items: center; gap: 0.3rem;
+    transition: background-color 0.2s;
+}
+.securityBtn:hover { background-color: var(--bg-row2); }
+.arrow { font-size: 1rem; line-height: 1; }
+
+.prefRow {
+    display: flex; align-items: center; justify-content: space-between;
+    background-color: var(--bg-row); border: 1px solid var(--border-col);
+    border-radius: 0.7rem; padding: 0.85rem 1rem;
+}
+.langDropdown { display: flex; align-items: center; gap: 0.5rem; }
+.langBtn {
+    display: flex; align-items: center; gap: 0.5rem;
+    background: var(--bg-row); border: 1px solid var(--border-col);
+    border-radius: 0.5rem; padding: 0.45rem 0.8rem;
+    color: var(--green-text); font-family: var(--body);
+    font-size: 0.88rem; font-weight: 600; cursor: pointer;
+    min-width: 8rem; justify-content: space-between;
+}
+.langBtn:hover { border-color: var(--green-text); }
+.dropChevron { color: var(--green-text); font-size: 1rem; display: inline-block; transform: rotate(90deg); transition: transform 0.2s; }
+.chevronUp   { transform: rotate(270deg); }
+.langMenu {
+    position: absolute; top: calc(100% + 0.4rem); right: 0;
+    background: var(--bg-card); border: 1px solid var(--border-col);
+    border-radius: 0.6rem; overflow: hidden; z-index: 100;
+    min-width: 10rem; box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.langOption {
+    display: flex; align-items: center; gap: 0.5rem;
+    padding: 0.65rem 1rem; font-family: var(--body);
+    font-size: 0.88rem; color: var(--text-main); cursor: pointer;
+}
+.langOption:hover { background: var(--bg-row); }
+.langOptionActive { color: var(--green-text); font-weight: 700; background: var(--bg-row2); }
+.langCheck { font-size: 0.75rem; color: var(--green-text); font-weight: 900; }
+
+.deleteRow {
+    display: flex; align-items: center; gap: 0.9rem;
+    background-color: var(--bg-row); border: 1px solid var(--border-col);
+    border-radius: 0.7rem; padding: 0.85rem 1rem;
+    cursor: pointer; transition: border-color 0.2s;
+}
+.deleteRow:hover { border-color: #e05252; }
+.deleteIcon {
+    width: 2.2rem; height: 2.2rem; background-color: var(--bg-btn);
+    border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.deleteText { flex: 1; }
+.deleteTitle { color: var(--text-main); font-weight: 700; font-size: 0.9rem; margin: 0 0 0.15rem 0; }
+.deleteSub   { color: var(--text-muted); font-size: 0.78rem; margin: 0; }
+.deleteChevron { color: var(--text-muted); font-size: 1.3rem; line-height: 1; transition: color 0.2s; }
+.deleteRow:hover .deleteChevron { color: #e05252; }
+
+.successMsg { color: #4CAF50; font-size: 0.82rem; margin: 0; font-weight: 600; }
+.errorMsg   { color: #e05252; font-size: 0.82rem; margin: 0; font-weight: 600; }
+
+.passInput {
+    background-color: var(--bg-card) !important; border: 1px solid var(--border-col) !important;
+    padding: 0.9rem 1rem; border-radius: 0.6rem; color: var(--text-main) !important;
+    font-family: var(--body); font-size: 0.9rem; width: 100%; box-sizing: border-box; outline: none;
+    -webkit-box-shadow: 0 0 0 1000px var(--bg-card) inset !important;
+    -webkit-text-fill-color: var(--text-main) !important;
+}
+.passInput::placeholder { color: var(--text-faint); }
+.passForm {
+    display: flex; flex-direction: column; gap: 0.7rem;
+    background-color: var(--bg-card); border: 1px solid var(--border-col);
+    border-radius: 0.7rem; padding: 1rem;
+}
+
+.modalOverlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+    display: flex; align-items: center; justify-content: center; z-index: 1000;
+}
+.modal {
+    background: var(--bg-card); border: 1px solid var(--border-col);
+    border-radius: 1.2rem; padding: 2rem; max-width: 22rem; width: 90%;
+    font-family: var(--body); display: flex; flex-direction: column;
+    align-items: center; gap: 0.8rem; text-align: center;
+}
+.modalIcon { width: 3.5rem; height: 3.5rem; background-color: var(--bg-btn); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.modalTitle { color: var(--text-main); font-size: 1.1rem; font-weight: 700; margin: 0; }
+.modalSub   { color: var(--text-muted); font-size: 0.82rem; margin: 0; line-height: 1.5; }
+.modalActions { display: flex; gap: 0.8rem; margin-top: 0.5rem; width: 100%; }
+.cancelBtn {
+    flex: 1; background: transparent; border: 1px solid var(--border-col);
+    border-radius: 0.6rem; color: var(--text-main); padding: 0.7rem;
+    font-family: var(--body); font-size: 0.88rem; cursor: pointer;
+}
+.cancelBtn:hover { border-color: var(--text-muted); }
+.confirmDeleteBtn {
+    flex: 1; background: #e05252; border: none; border-radius: 0.6rem;
+    color: var(--text-main); padding: 0.7rem;
+    font-family: var(--buttons); font-weight: 700; font-size: 0.88rem; cursor: pointer;
+}
+.confirmDeleteBtn:hover { background: #c43e3e; }

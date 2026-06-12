@@ -1,0 +1,64 @@
+.info{
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    margin-top: 4rem;
+}
+.quote{
+    color:var(--green);
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: var(--headings);
+}
+.text{
+    font-weight: 600;
+    margin: 2rem 0rem;
+    margin-left: 3rem;
+    font-size: var(--size24);
+    font-family: var(--body);
+
+}
+.boxes{
+    display: flex;
+    gap: 0.7rem;
+    font-size: 1.3rem;
+    margin: 1.5rem 0rem;
+    margin-left: 3rem;
+}
+.grpText{
+    display: flex;
+    flex-direction: column;
+}
+.paragraph{
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-family: var(--body);
+    width: 18rem;
+}
+.heading{
+    font-size: 1.1rem;
+    font-family: var(--body);
+}
+.leftside{
+    display: flex;
+}
+.apple{
+    width: 32rem;
+}
+.mainLoginPage{
+    display: flex;
+}
+.leafbox{
+    display: flex;
+    color: var(--text-muted);
+    background: linear-gradient(135deg, #B2E8C7 0%, var(--bg-page) 40%, var(--bg-page) 60%, #B2E8C7 100%);
+    border: 1px solid var(--greentree);
+    border-radius: 1.2rem;
+    padding: 2.1rem 1.9rem 1.6rem 0rem;
+    width: fit-content;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    font-family: var(--body);
+    font-size: 0.9rem;
+}

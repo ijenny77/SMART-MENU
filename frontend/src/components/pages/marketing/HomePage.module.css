@@ -1,0 +1,85 @@
+.HomePageLeft{
+    padding-left:2rem ;
+    padding-top: 2rem;
+    
+}
+.HomePageRight{
+    margin-top: 8.5rem;
+}
+.HomePage{
+    display: grid;
+    grid-template-columns:42% 58%;
+    max-height: 95vh;
+    background-color: var(--green);
+    align-items: center;
+}
+.landingImage{
+    max-height:80vh;
+    margin-left: 1.5rem;
+    position: absolute;
+    top: 7rem;
+    left: 1;
+    z-index: 0;
+}
+.authButtons{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 34rem;
+    margin-left:3.6rem ;
+}
+.authButton{
+    padding: 0.5rem 0.7rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: var(--green);
+    border-radius: 0.5rem;
+    position:relative;
+    z-index: 1;
+    font-family: var(--buttons);
+}
+.allInOne{
+    border: 2px solid var(--greentree);
+    border-radius: 2rem;
+    width: fit-content;
+    padding: 0.1rem 0.9rem;
+    background-color: #DAFCEA;
+    margin-bottom: 2rem;
+    font-family: var(--headings);
+    color: var(--black);
+}
+.LandingText{
+    font-size: 4.2rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+.restaurants{
+    color: var(--greentree);
+}
+.landingTextSmall{
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: var(--body);
+    color: var(--black);
+}
+.Users{
+    display: flex;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+.usersText{
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: var(--body);
+    color: var(--black);
+}
+.smartMenu{
+    color: var(--greentree);
+}
+.mainHomePage{
+    background-color: black;
+    min-height:100vh ;
+}
+.homeLast{
+    grid-column: 1/-1;
+}

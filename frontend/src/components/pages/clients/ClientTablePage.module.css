@@ -1,0 +1,256 @@
+.pageWrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg-page);
+}
+
+/* ── Main ── */
+.main {
+    margin-left: 20%;
+    flex: 1;
+    padding: 2.4rem 2.8rem 3rem 2.8rem;
+    font-family: var(--body);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* ── Steak image top-right ── */
+.steakImg {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    width: 13rem;
+    height: 13rem;
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+/* ── Header ── */
+.welcome {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.welcome strong {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.heading {
+    font-family: var(--headings);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+}
+
+/* ── Restaurant card ── */
+.restaurantCard {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-col);
+    border-radius: 0.9rem;
+    padding: 0.85rem 1.1rem;
+    max-width: 30rem;
+}
+
+.restaurantImg {
+    width: 5.5rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 0.55rem;
+    flex-shrink: 0;
+}
+
+.restaurantInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.restaurantName {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.restaurantDesc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ── Legend ── */
+.legend {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.legendDot {
+    width: 0.85rem;
+    height: 0.85rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legendLabel {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ── Grid wrapper ── */
+.gridWrapper {
+    border: 1px solid var(--border-col);
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    background-color: var(--bg-card);
+    max-width: 38rem;
+}
+
+.tableGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/* ── Table Unit ── */
+.tableUnit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.tableUnit:hover {
+    transform: scale(1.06);
+}
+
+/* ── Seats ── */
+.seatsTop,
+.seatsBottom {
+    display: flex;
+    gap: 6px;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.seatsLeft,
+.seatsRight {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Horizontal seats (top / bottom) */
+.seatsTop .seat,
+.seatsBottom .seat {
+    width: 20px;
+    height: 9px;
+    border-radius: 3px;
+}
+
+/* Vertical seats (left / right) */
+.seatsLeft .seat,
+.seatsRight .seat {
+    width: 9px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+/* Table square */
+.tableSquare {
+    width: 52px;
+    height: 52px;
+    border-radius: 6px;
+}
+
+/* ── Status colours (table + seats inherit via CSS custom props) ── */
+.available .tableSquare,
+.available .seat {
+    background-color: #b2f0c8;
+}
+
+.occupied .tableSquare,
+.occupied .seat {
+    background-color: #6b7280;
+}
+
+.reserved .tableSquare,
+.reserved .seat {
+    background-color: #9b3a4a;
+}
+
+.selected .tableSquare,
+.selected .seat {
+    background-color: #2d6a2d;
+}
+
+/* ── Table number label ── */
+.tableNum {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+    pointer-events: none;
+    user-select: none;
+}
+
+.available .tableNum  { color: rgba(0,0,0,0.4); }
+.selected  .tableNum  { color: rgba(255,255,255,0.9); }
+
+/* ── Confirm button ── */
+.confirmBtn {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    padding: 0.75rem 2rem;
+    background-color: var(--greentree);
+    color: #fff;
+    border: none;
+    border-radius: 0.6rem;
+    font-family: var(--buttons);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.confirmBtn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.confirmBtn:not(:disabled):hover { opacity: 0.85; }
+
+/* ── Legend dot colours reuse same classes ── */
+.legendDot.available  { background-color: #b2f0c8; }
+.legendDot.occupied   { background-color: #6b7280; }
+.legendDot.reserved   { background-color: #9b3a4a; }
+.legendDot.selected   { background-color: #2d6a2d; }

@@ -1,0 +1,308 @@
+.main {
+    margin-left: 23rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: var(--body);
+}
+
+/* ── Top Bar ── */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+}
+.pageTitle    { color: var(--text-main); font-family: var(--headings); font-size: 1.6rem; font-weight: 700; margin: 0 0 0.2rem 0; }
+.pageSubtitle { color: var(--text-muted); font-size: 0.8rem; margin: 0; }
+.rightSide    { display: flex; align-items: center; gap: 0.8rem; }
+.icon         { width: 1.6rem; height: 1.8rem; }
+.lineIcon     { height: 1.7rem; }
+.username     { color: var(--text-main); margin: 0; }
+.userIcon     { width: 2rem; height: 2rem; }
+
+/* ── Top Stat Cards ── */
+.statCards {
+    display: flex;
+    gap: 1rem;
+    padding-right: 2rem;
+    margin-bottom: 1.5rem;
+}
+.statCard {
+    flex: 1;
+    border: 1px solid var(--border-col);
+    border-radius: 0.9rem;
+    background-color: var(--bg-card);
+    padding: 1rem 1.2rem;
+}
+.statCardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+.statIconWrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.statIconImg { width: 2.4rem; height: 2.4rem; object-fit: contain; }
+.statLabel   { color: var(--text-muted); font-size: 0.82rem; }
+.dots        { color: var(--text-faint); font-size: 1rem; letter-spacing: 1px; cursor: pointer; }
+.statValue   { color: var(--text-main); font-size: 1.6rem; font-weight: 800; margin: 0 0 0.2rem 0; }
+.statChange  { color: var(--greentree); font-size: 0.72rem; margin: 0; }
+
+/* ── Chart Row ── */
+.chartRow {
+    display: flex;
+    gap: 1rem;
+    padding-right: 2rem;
+    margin-bottom: 1.5rem;
+    align-items: stretch;
+}
+
+.chartCard {
+    flex: 2.2;
+    border: 1px solid var(--border-col);
+    border-radius: 0.9rem;
+    background-color: var(--bg-card);
+    padding: 1.2rem 1.4rem;
+}
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+.chartTitle  { color: var(--text-main); font-weight: 700; font-size: 1rem; margin: 0 0 0.2rem 0; }
+.chartSub    { color: var(--text-dim); font-size: 0.72rem; margin: 0; }
+
+.timeTabs { display: flex; gap: 0.5rem; }
+.timeTab  {
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    font-family: var(--body);
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.3rem;
+    transition: color 0.2s;
+}
+.timeTabActive { color: var(--text-main); font-weight: 600; }
+
+.chartWrap {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+.yAxis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0.4rem 0 0;
+}
+.yLabel { color: var(--text-faint); font-size: 0.65rem; }
+
+.chartSvg {
+    flex: 1;
+    height: 200px;
+    display: block;
+}
+
+/* ── Side Stats ── */
+.sideStats {
+    flex: 1;
+    border: 1px solid var(--border-col);
+    border-radius: 0.9rem;
+    background-color: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+}
+.sideStat {
+    flex: 1;
+    padding: 0.9rem 1.2rem;
+}
+.sideStatBorder { border-bottom: 1px solid var(--border-col2); }
+.sideStatLabel  { color: var(--text-muted); font-size: 0.75rem; margin: 0 0 0.2rem 0; }
+.sideStatValue  { color: var(--text-main); font-size: 1.3rem; font-weight: 800; margin: 0 0 0.15rem 0; }
+.sideStatChange { color: var(--greentree); font-size: 0.7rem; margin: 0; }
+
+/* ── Bottom Row ── */
+.bottomRow {
+    display: flex;
+    gap: 1rem;
+    padding-right: 2rem;
+    align-items: flex-start;
+}
+
+/* ── Operational stats grid (replaces category 2×2) ── */
+.opsGrid {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.85rem;
+}
+
+.opsCard {
+    border: 1px solid var(--border-col);
+    border-radius: 0.9rem;
+    background-color: var(--bg-card);
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: default;
+    transition: border-color 0.15s;
+}
+
+.opsCard:hover { border-color: var(--greentree); }
+
+.opsCardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.opsIconWrap {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: #1e2b1e;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--greentree);
+    flex-shrink: 0;
+}
+
+.viewDetails {
+    color: var(--text-dim);
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: color 0.15s;
+    white-space: nowrap;
+    padding-top: 0.1rem;
+}
+.viewDetails:hover { color: var(--greentree); }
+
+.opsValue {
+    font-family: var(--headings);
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.1;
+}
+
+.opsLabel {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.opsSub {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin: 0 0 0.5rem 0;
+}
+
+.opsFooter {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--border-col);
+    cursor: pointer;
+}
+
+.opsLink {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--greentree);
+    transition: opacity 0.15s;
+}
+
+.opsFooter:hover .opsLink { opacity: 0.75; }
+
+/* ── Create Card ── */
+.createCard {
+    flex: 1;
+    border: 1px solid var(--border-col);
+    border-radius: 0.9rem;
+    background-color: var(--bg-card);
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.createHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.createTitle { color: var(--text-main); font-size: 1.2rem; font-weight: 800; margin: 0; font-family: var(--headings); }
+.createSub   { color: var(--text-dim); font-size: 0.72rem; margin: 0; }
+.viewAll     { color: var(--text-dim); font-size: 0.75rem; cursor: pointer; transition: color 0.2s; }
+.viewAll:hover { color: var(--green); }
+
+.createNew {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-row);
+    border: 1px solid var(--border-col);
+    border-radius: 0.6rem;
+    padding: 0.6rem 0.9rem;
+}
+.createNewLabel { color: var(--text-muted); font-size: 0.82rem; }
+.addImg {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.createOptions { display: flex; flex-direction: column; gap: 0.6rem; }
+.createOption  {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+    padding: 0.3rem 0;
+}
+.radioCircle {
+    width: 1.2rem; height: 1.2rem;
+    border-radius: 50%;
+    border: 2px solid var(--border-col);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+.radioChecked { border-color: var(--green); background-color: var(--green); }
+.radioTick    { color: var(--black); font-size: 0.65rem; font-weight: 900; line-height: 1; }
+.optionLabel  { flex: 1; color: var(--text-main); font-size: 0.85rem; font-weight: 600; }
+.optionBadge  {
+    font-size: 0.65rem; font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.3rem;
+}
+.badgeNew     { background-color: rgba(59, 128, 25, 0.15); color: var(--greentree); border: 1px solid var(--greentree); }
+.badgeDefault { background-color: rgba(224, 123, 0, 0.15); color: #e07b00;          border: 1px solid #e07b00; }
+
+.createBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-col);
+    gap: 0.4rem;
+}
+.createBottomTitle { color: var(--text-main); font-size: 0.82rem; font-weight: 600; margin: 0; }
+.createBottomSub   { color: var(--text-dim); font-size: 0.72rem; margin: 0; }
+.dishCoverImg      { width: 3.5rem; height: 3.5rem; object-fit: contain; }
