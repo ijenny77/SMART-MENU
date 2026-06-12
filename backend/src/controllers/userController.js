@@ -24,6 +24,19 @@ const deleteUser = async (req, res) => {
     }
 }
 
+const updateProfile = async (req, res) => {
+    try {
+        const { restaurantName, name } = req.body
+        const updates = {}
+        if (restaurantName !== undefined) updates.restaurantName = restaurantName
+        if (name !== undefined) updates.name = name
+        const user = await User.findByIdAndUpdate(req.user._id, updates, { new: true }).select('-password')
+        res.json({ id: user._id, name: user.name, email: user.email, role: user.role, restaurantName: user.restaurantName })
+    } catch (err) {
+        res.status(500).json({ message: err.message })
+    }
+}
+
 const updatePassword = async (req, res) => {
     try {
         const { currentPassword, newPassword } = req.body
@@ -43,4 +56,4 @@ const updatePassword = async (req, res) => {
     }
 }
 
-module.exports = { getClients, deleteUser, updatePassword }
+module.exports = { getClients, deleteUser, updatePassword, updateProfile }

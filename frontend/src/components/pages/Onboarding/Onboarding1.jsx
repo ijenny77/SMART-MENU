@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Input from '../../ui/Input'
 import Button from '../../ui/Button'
+import { useAuth } from '../../../context/AuthContext'
+import { api } from '../../../services/api'
 import shop from '../../../assets/Group 88.png'
 import styles from './OnboardingForm.module.css'
 
@@ -13,6 +14,27 @@ const STEPS = [
 
 const Onboarding1 = () => {
   const navigate = useNavigate()
+  const { user, signIn } = useAuth()
+
+  const [restaurantName, setRestaurantName] = useState(user?.restaurantName || '')
+  const [completeName,   setCompleteName]   = useState('')
+  const [ownerName,      setOwnerName]      = useState(user?.name || '')
+  const [ownerEmail,     setOwnerEmail]     = useState(user?.email || '')
+  const [saving,         setSaving]         = useState(false)
+  const [error,          setError]          = useState('')
+
+  const handleContinue = async () => {
+    if (!restaurantName.trim()) { setError('Restaurant name is required'); return }
+    setSaving(true)
+    setError('')
+    try {
+      await api.patch('/users/profile', { restaurantName: restaurantName.trim(), name: ownerName.trim() || user?.name })
+      navigate('/Onboarding2')
+    } catch (err) {
+      setError(err.message)
+      setSaving(false)
+    }
+  }
 
   return (
     <div className={styles.page}>
@@ -25,12 +47,10 @@ const Onboarding1 = () => {
           {STEPS.map((s, i) => (
             <React.Fragment key={s.num}>
               <div className={`${styles.stepItem} ${s.num === 1 ? styles.current : ''}`}>
-                <div className={styles.stepNum}>{s.num === 1 ? s.num : s.num}</div>
+                <div className={styles.stepNum}>{s.num}</div>
                 <span className={styles.stepLabel}>{s.label}</span>
               </div>
-              {i < STEPS.length - 1 && (
-                <div className={`${styles.connector}`} />
-              )}
+              {i < STEPS.length - 1 && <div className={styles.connector} />}
             </React.Fragment>
           ))}
         </div>
@@ -47,12 +67,24 @@ const Onboarding1 = () => {
         {/* Name row */}
         <div className={styles.nameRow}>
           <div className={styles.fieldGroup}>
-            <p className={styles.fieldLabel}>Restaurant Name</p>
-            <Input className={styles.formInput} type="text" placeholder="e.g. The Green Table" />
+            <p className={styles.fieldLabel}>Restaurant Name *</p>
+            <input
+              className={styles.formInput}
+              type="text"
+              placeholder="e.g. The Green Table"
+              value={restaurantName}
+              onChange={e => setRestaurantName(e.target.value)}
+            />
           </div>
           <div className={styles.fieldGroup}>
             <p className={styles.fieldLabel}>Complete Name</p>
-            <Input className={styles.formInput} type="text" placeholder="Full legal name" />
+            <input
+              className={styles.formInput}
+              type="text"
+              placeholder="Full legal name"
+              value={completeName}
+              onChange={e => setCompleteName(e.target.value)}
+            />
           </div>
         </div>
 
@@ -88,19 +120,35 @@ const Onboarding1 = () => {
         <div className={styles.nameRow}>
           <div className={styles.fieldGroup}>
             <p className={styles.fieldLabel}>Owner Name</p>
-            <Input className={styles.formInput} type="text" placeholder="Enter owner name" />
+            <input
+              className={styles.formInput}
+              type="text"
+              placeholder="Enter owner name"
+              value={ownerName}
+              onChange={e => setOwnerName(e.target.value)}
+            />
           </div>
           <div className={styles.fieldGroup}>
             <p className={styles.fieldLabel}>Owner Email</p>
-            <Input className={styles.formInput} type="email" placeholder="owner@email.com" />
+            <input
+              className={styles.formInput}
+              type="email"
+              placeholder="owner@email.com"
+              value={ownerEmail}
+              readOnly
+            />
           </div>
         </div>
+
+        {error && <p style={{ color: '#e05252', fontSize: '0.85rem', margin: 0 }}>{error}</p>}
 
         <hr className={styles.divider} />
 
         <div className={styles.btnRow}>
           <Button className={styles.cancelBtn} onClick={() => navigate('/')}>Cancel</Button>
-          <Button className={styles.continueBtn} onClick={() => navigate('/Onboarding2')}>Continue →</Button>
+          <Button className={styles.continueBtn} onClick={handleContinue} disabled={saving}>
+            {saving ? 'Saving…' : 'Continue →'}
+          </Button>
         </div>
 
       </div>

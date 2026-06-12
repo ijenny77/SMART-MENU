@@ -97,15 +97,16 @@
 .toggleRow:last-child { border-bottom: none; }
 
 .toggleIcon {
-    width: 2.2rem; height: 2.2rem;
+    width: 1.3rem; height: 1.3rem;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
 }
 
 .toggleIconImg {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 1.3rem;
+    height: 1.3rem;
     object-fit: contain;
+    filter: var(--icon-filter);
 }
 .toggleText { flex: 1; }
 .toggleLabel { font-size: 0.88rem; font-weight: 600; color: var(--text-main); margin: 0 0 0.15rem 0; }

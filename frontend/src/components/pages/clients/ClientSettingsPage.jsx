@@ -14,13 +14,14 @@ import billingIc          from '../../../assets/Frame.png'
 import paletteIc         from '../../../assets/paint-palette-art 1.png'
 import earthIc         from '../../../assets/earth 2.png'
 import checkIc         from '../../../assets/_x32_.png'
-import emailIc         from '../../../assets/email.png'
-import clockIc         from '../../../assets/clock 1.png'
-import bellIc          from '../../../assets/Group 391.png'
-import accountIc       from '../../../assets/account.png'
-import revenueIc       from '../../../assets/revenue.png'
+import emailIc         from '../../../assets/emailNot.png'
+import clockIc         from '../../../assets/reminder.png'
+import bellIc          from '../../../assets/pushNot.png'
+import onlineIc       from '../../../assets/online.png'
+import revenueIc       from '../../../assets/dataSharing.png'
 import deleteIc        from '../../../assets/delete.png'
 import securityIc      from '../../../assets/Frame (1).png'
+import updatesIc       from '../../../assets/updates.png'
 
 /* ── Toggle switch ── */
 const Toggle = ({ value, onChange }) => (
@@ -211,7 +212,7 @@ const ClientSettingsPage = () => {
                     <ToggleRow icon={emailIc}   label="Email Notifications" sub="Receive updates via email"         value={emailNotif}   onChange={setEmailNotif}   />
                     <ToggleRow icon={bellIc}    label="Push Notifications"  sub="Receive push notifications"       value={pushNotif}    onChange={setPushNotif}    />
                     <ToggleRow icon={clockIc}   label="Task Reminders"      sub="Get reminded about due tasks"     value={taskReminder} onChange={setTaskReminder} />
-                    <ToggleRow icon={alertsIc}  label="Marketing Updates"   sub="Receive product updates and tips" value={marketing}    onChange={setMarketing}    />
+                    <ToggleRow icon={updatesIc}  label="Marketing Updates"   sub="Receive product updates and tips" value={marketing}    onChange={setMarketing}    />
                   </div>
                 </div>
 
@@ -220,7 +221,7 @@ const ClientSettingsPage = () => {
                   <p className={styles.sectionSub}>Manage your privacy and data preferences</p>
                   <SelectRow label="Profile Visibility" value={profileVisibility} onChange={setProfileVisibility} options={[{ value:'only_me', label:'Only me' },{ value:'everyone', label:'Everyone' },{ value:'connections', label:'Connections only' }]} />
                   <div className={styles.toggleList} style={{ marginTop: '1rem' }}>
-                    <ToggleRow icon={accountIc} label="Show Online Status"       sub="Allow others to see when you're online"          value={onlineStatus}   onChange={setOnlineStatus}   />
+                    <ToggleRow icon={onlineIc} label="Show Online Status"       sub="Allow others to see when you're online"          value={onlineStatus}   onChange={setOnlineStatus}   />
                     <ToggleRow icon={revenueIc} label="Data Sharing"             sub="Allow anonymous analytics"                       value={dataSharing}    onChange={setDataSharing}    />
                     <ToggleRow icon={deleteIc}  label="Delete Inactive Account"  sub="Auto-delete account after 2 years of inactivity" value={deleteInactive} onChange={setDeleteInactive} />
                   </div>
@@ -387,7 +388,7 @@ const ClientSettingsPage = () => {
                 <p className={styles.sectionSub}>Manage your privacy and data preferences</p>
                 <SelectRow label="Profile Visibility" value={profileVisibility} onChange={setProfileVisibility} options={[{ value:'only_me', label:'Only me' },{ value:'everyone', label:'Everyone' },{ value:'connections', label:'Connections only' }]} />
                 <div className={styles.toggleList} style={{ marginTop: '1rem' }}>
-                  <ToggleRow icon={accountIc} label="Show Online Status"       sub="Allow others to see when you're online"          value={onlineStatus}   onChange={setOnlineStatus}   />
+                  <ToggleRow icon={onlineIc} label="Show Online Status"       sub="Allow others to see when you're online"          value={onlineStatus}   onChange={setOnlineStatus}   />
                   <ToggleRow icon={revenueIc} label="Data Sharing"             sub="Allow anonymous analytics"                       value={dataSharing}    onChange={setDataSharing}    />
                   <ToggleRow icon={deleteIc}  label="Delete Inactive Account"  sub="Auto-delete account after 2 years of inactivity" value={deleteInactive} onChange={setDeleteInactive} />
                 </div>

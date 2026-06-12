@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTheme } from '../../../context/ThemeContext'
 import { useAuth } from '../../../context/AuthContext'
+import { api } from '../../../services/api'
 import SideBar from '../../SideBar'
 import search      from '../../../assets/Search1.png'
 import searchLight from '../../../assets/searchLight.png'
@@ -235,6 +236,22 @@ const SettingsPage = () => {
   const userIc   = darkMode ? userDark : user
   const [openIndex, setOpenIndex] = useState(null)
   const [toast, setToast] = useState(null)
+
+  const [restaurantName, setRestaurantName] = useState(user?.restaurantName || '')
+  const [savingProfile, setSavingProfile]   = useState(false)
+
+  const handleSaveProfile = async () => {
+    if (!restaurantName.trim()) return
+    setSavingProfile(true)
+    try {
+      await api.patch('/users/profile', { restaurantName: restaurantName.trim() })
+      showToast('Restaurant name updated!')
+    } catch (err) {
+      showToast('Failed to update: ' + err.message)
+    } finally {
+      setSavingProfile(false)
+    }
+  }
   const [prefs, setPrefs] = useState({
     language: 'en', timezone: 'CAT', currency: 'FRW', dateFormat: 'DD/MM/YYYY',
     emailNotif: true, pushNotif: false, smsNotif: false, weeklyReport: true,
@@ -329,6 +346,39 @@ const SettingsPage = () => {
                 <p className={styles.profileEmail}>{displayEmail}</p>
                 <span className={styles.profileRole}>Admin</span>
               </div>
+            </div>
+
+            {/* Restaurant Name Card */}
+            <div className={styles.sideCard}>
+              <p className={styles.sideCardTitle}>Restaurant Profile</p>
+              <p style={{ fontSize: '0.82rem', color: 'var(--text-dim)', margin: '0 0 0.7rem 0' }}>
+                This name is shown to clients when they browse restaurants
+              </p>
+              <input
+                type="text"
+                value={restaurantName}
+                onChange={e => setRestaurantName(e.target.value)}
+                placeholder="Enter restaurant name"
+                style={{
+                  width: '100%', boxSizing: 'border-box',
+                  background: 'transparent', border: '1px solid var(--border-col)',
+                  borderRadius: '0.5rem', padding: '0.6rem 0.8rem',
+                  color: 'var(--text-main)', fontFamily: 'var(--body)',
+                  fontSize: '0.9rem', outline: 'none', marginBottom: '0.7rem'
+                }}
+              />
+              <button
+                onClick={handleSaveProfile}
+                disabled={savingProfile || !restaurantName.trim()}
+                style={{
+                  width: '100%', background: 'var(--greentree)', color: '#fff',
+                  border: 'none', borderRadius: '0.5rem', padding: '0.6rem',
+                  fontFamily: 'var(--body)', fontSize: '0.88rem', fontWeight: 600,
+                  cursor: savingProfile ? 'not-allowed' : 'pointer', opacity: savingProfile ? 0.7 : 1
+                }}
+              >
+                {savingProfile ? 'Saving…' : 'Save Name'}
+              </button>
             </div>
 
             {/* Plan Card */}
