@@ -35,8 +35,8 @@ const ClientMenuPage = () => {
           category:    item.category,
           rawPrice:    Number(item.price),
           price:       `Frw ${Number(item.price).toLocaleString()}`,
-          image:       item.image_url || drink1,
-          image_url:   item.image_url || null,
+          image:       (item.image_url && !item.image_url.startsWith('blob:')) ? item.image_url : drink1,
+          image_url:   (item.image_url && !item.image_url.startsWith('blob:')) ? item.image_url : null,
         }))
         setDbItems(normalised)
         const cats = ['All', ...new Set(normalised.map(i => i.category).filter(Boolean))]
@@ -131,7 +131,7 @@ const ClientMenuPage = () => {
                 const qty = cartQty(item.id)
                 return (
                   <div key={item.id} className={styles.itemRow}>
-                    <img src={item.image} alt={item.name} className={styles.itemImg} />
+                    <img src={item.image} alt={item.name} className={styles.itemImg} onError={e => { e.target.onerror = null; e.target.src = drink1 }} />
                     <div className={styles.itemBody}>
                       <p className={styles.itemName}>{item.name}</p>
                       <p className={styles.itemIngredients}>{item.ingredients}</p>

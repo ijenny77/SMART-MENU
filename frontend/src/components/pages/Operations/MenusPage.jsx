@@ -64,10 +64,13 @@ const MenusPage = () => {
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0]
-    if (file) {
-      setImageFile(file)
-      setUploadedImage(URL.createObjectURL(file))
+    if (!file) return
+    const reader = new FileReader()
+    reader.onload = (ev) => {
+      setUploadedImage(ev.target.result)
+      setImageFile(ev.target.result)
     }
+    reader.readAsDataURL(file)
   }
 
   const handleAddItem = async () => {

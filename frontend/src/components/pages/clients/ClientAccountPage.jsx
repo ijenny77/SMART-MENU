@@ -4,13 +4,17 @@ import SideBarClient from '../../SideBarClient'
 import styles from './ClientAccountPage.module.css'
 import { useAuth } from '../../../context/AuthContext'
 import { api } from '../../../services/api'
-import userIcon     from '../../../assets/account.png'
-import emailIcon    from '../../../assets/email.png'
-import phoneIcon    from '../../../assets/phone.png'
-import addressIcon  from '../../../assets/address.png'
-import dateIcon     from '../../../assets/DateCreation.png'
-import lockIcon     from '../../../assets/lock 1.png'
-
+import userIcon      from '../../../assets/fullName.png'
+import emailIcon     from '../../../assets/emailAddress.png'
+import phoneIcon     from '../../../assets/phoneNumber.png'
+import addressIcon   from '../../../assets/company.png'
+import dateIcon      from '../../../assets/memberSince.png'
+import lockIcon      from '../../../assets/password.png'
+import activeSession from '../../../assets/activeSessions.png'
+import plan          from '../../../assets/currentPlan.png'
+import members       from '../../../assets/member.png'
+import payment       from '../../../assets/payment.png'
+import security      from '../../../assets/security.png'
 const FieldRow = ({ icon, label, value, editable, onChange }) => (
   <div className={styles.fieldRow}>
     <div className={styles.fieldIcon}>{icon}</div>
@@ -199,13 +203,13 @@ const ClientAccountPage = () => {
             <FieldRow icon={<img src={lockIcon} alt="" className={styles.fieldIconImg} />} label="Password" value="••••••••••••••••" editable={false} />
             <div className={styles.fieldRow} onClick={() => handleToggle2FA(!twoFA)}>
               <div className={styles.fieldIcon}>
-                <img src={lockIcon} alt="" className={styles.fieldIconImg} />
+                <img src={security} alt="" className={styles.fieldIconImg} />
               </div>
               <span className={styles.fieldLabel}>Two-Factor Authentication</span>
               <span className={`${styles.fieldValue} ${twoFA ? styles.enabledText : styles.mutedText}`}>{twoFA ? 'Enabled' : 'Not enabled'}</span>
               <svg className={styles.chevron} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
             </div>
-            <FieldRow icon={<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>} label="Active Sessions" value={`${sessionCount} active session${sessionCount !== 1 ? 's' : ''}`} editable={false} />
+            <FieldRow icon={<img src={activeSession} alt="" className={styles.fieldIconImg} />} label="Active Sessions" value={`${sessionCount} active session${sessionCount !== 1 ? 's' : ''}`} editable={false} />
           </div>
         </div>
 
@@ -223,9 +227,7 @@ const ClientAccountPage = () => {
           <div className={styles.fieldList}>
             <div className={styles.fieldRow}>
               <div className={styles.fieldIcon}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
+                <img src={plan} alt="" className={styles.fieldIconImg} />
               </div>
               <span className={styles.fieldLabel}>Current Plan</span>
               <span className={styles.fieldValue}>
